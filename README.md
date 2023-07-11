@@ -23,3 +23,7 @@ There are three Sample Projects in this repo:
  - useMemoized
  - useListenable : it re-builds widget whenever any value changes
  - useAnimationController
+ - reducers & redux : reducers => newState = OldState + action
+ - useLifeCycleState : get the current state of the application life cycle
+ -   - when app is paused, hide sensitive information from screen
+ -   - 

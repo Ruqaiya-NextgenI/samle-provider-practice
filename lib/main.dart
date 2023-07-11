@@ -2,8 +2,11 @@ import 'package:demotest/breadcrumApp/screens/addbreadcrumb.dart';
 import 'package:demotest/detailsproviderApp/provider/objectprovider.dart';
 import 'package:demotest/detailsproviderApp/screens/objecthome.dart';
 import 'package:demotest/hookssampledemo/usefuturedemowidget.dart';
+import 'package:demotest/hookssampledemo/uselifecycleDemo.dart';
 import 'package:demotest/hookssampledemo/uselistenabledemo.dart';
 import 'package:demotest/hookssampledemo/useanimationdemo.dart';
+import 'package:demotest/hookssampledemo/usereducerdemo.dart';
+import 'package:demotest/hookssampledemo/usestreamcontrollerdemo.dart';
 import 'package:demotest/multiproviderDemo/model/minute.dart';
 import 'package:demotest/multiproviderDemo/model/second.dart';
 import 'package:demotest/multiproviderDemo/screens/minutescreen.dart';
@@ -20,7 +23,7 @@ void main() {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  const UseScrollDemo(),
+      home:  const UseLifeCycleDemo(),
 
     ),
   );

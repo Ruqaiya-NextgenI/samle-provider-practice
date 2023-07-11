@@ -4,14 +4,12 @@ import 'package:demotest/extensions/normalize.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-
-
 const url = 'https://cdn.pixabay.com/photo/2023/07/01/18/21/water-8100724_640.jpg';
 int imgHeight = 300;
 
-class UseScrollDemo extends HookWidget {
+class UseAnimationDemo extends HookWidget {
 
-  const UseScrollDemo({
+  const UseAnimationDemo({
     super.key,
   });
 
@@ -31,7 +29,7 @@ class UseScrollDemo extends HookWidget {
       lowerBound: 0.0,
     );
 
-    final controller = usePageController();
+    final controller = useScrollController();
 
     useEffect(() {
       controller.addListener(() {
