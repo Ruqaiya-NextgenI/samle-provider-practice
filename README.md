@@ -14,3 +14,10 @@ There are three Sample Projects in this repo:
  - BreadCrumb DemoApp
  - DetailsProvider
  - MultiProviderDemoApp
+ It also has hook widget sample projects
+ - useStream 
+ - useTextEditingController
+ - useState
+ - useEffect
+ - useFuture
+ - useMemoized

@@ -14,16 +14,45 @@ class UseStreamDemoWidget extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final dateTime = useStream(getTime());
+
+    final controller = useTextEditingController();
+    final text = useState('');
+
+    useEffect(() {
+      controller.addListener(() {
+        text.value = controller.text;
+      });
+      return null;
+    },
+        
+    [controller]);
+
     return  Scaffold(
       appBar: AppBar(
-        title: const Text('Hooks Demo'),
+        title:  Text(text.value),
         shadowColor: Colors.blue,
-          surfaceTintColor: Colors.black,
+        surfaceTintColor: Colors.black,
 
       ),
       body: Container(
         color: Colors.white60,
-        child: Center(child: Text(dateTime.data ?? 'Hooks')),
+        child: Center(
+            child: Column(
+              children: [
+                Text(
+                    dateTime.data ?? 'Hooks',
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                  child: TextField(
+                    controller: controller,
+
+                  ),
+                ),
+
+              ],
+            ),
+        ),
       ),
     );
   }
